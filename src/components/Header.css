@@ -1,0 +1,129 @@
+.header {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 40px 0;
+
+@media (min-width: 1024px) {
+    margin: 0 0 33px 0;
+    z-index: 1;
+}
+
+.container {
+    padding: 16px 16px 0;
+    background-color: white;
+
+@media (min-width: 768px) {
+    padding: 25px 25px 0;
+}
+
+@media (min-width: 1024px) {
+    padding: 40px 25px 0;
+}
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 133px;
+    height: 40px;
+
+@media (min-width: 1024px) {
+    width: 187px;
+    height: 56px;
+}
+}
+
+.nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
+    opacity: 0;
+    pointer-events: none;
+    overflow-y: auto;
+
+@media (min-width: 1024px) {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+}
+
+.navActive {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+
+@media (min-width: 1024px) {
+    flex-direction: row;
+    margin-bottom: 0;
+}
+}
+
+.item {
+&:not(:last-child) {
+     margin-bottom: 8px;
+ }
+
+@media (min-width: 1024px) {
+    margin: 0 40px 0 0;
+
+&:not(:last-child) {
+     margin-bottom: 0;
+ }
+}
+}
+
+.link {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: black;
+    transition: color 0.3s ease-out;
+
+@media (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 28px;
+
+&:hover {
+     color: orange;
+ }
+}
+}
+
+.burger {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+@media (min-width: 1024px) {
+    display: none;
+}
+}
+
+.burgerIcon {
+    width: 32px;
+    height: 28px;
+}
+
+}
+
